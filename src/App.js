@@ -5,14 +5,15 @@ import { loadQuoteForStock } from './api/iex'
 
 class App extends Component {
   state = {
-    erro: null,
+    error: null,
+    enteredSymbol: 'AAPL',
     quote: null
   }
 
   // The first time our component is rendered
   // this method is called
   componentDidMount() {
-    loadQuoteForStock('dddd')
+    loadQuoteForStock('NFLX')
       .then(quote => {
         this.setState({ quote: quote })
       })
@@ -25,12 +26,26 @@ class App extends Component {
       })
   }
 
+  // onChangeEnteredSymbol = {target:{value}}
+  onChangeEnteredSymbol = (event) => {
+    this.setState({
+      enteredSymbol: event.target.value.trim().toUpperCase()
+    })
+  }
+
   render() {
-    const { error, quote } = this.state
+    const { error, enteredSymbol, quote } = this.state
 
     return (
       <div className="App">
         <h1>Wolf of React</h1>
+
+        <input
+          value={enteredSymbol}
+          placeholder="SyMbol e.g. NFLX"
+          aria-label="Symbol"
+          onChange={this.onChangeEnteredSymbol} />
+
         {
           error && <p>{error.message}</p>
         }
