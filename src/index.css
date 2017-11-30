@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   font-family: sans-serif;
 }
 
@@ -12,10 +12,53 @@ input {
   font-size: 1rem;
 }
 
+/* buttons */
 button {
   font-size: 1rem;
   color: white;
-  background: #222;
+  background: #555;
   border: 0.1rem solid black;
-  margin-left: 0.25rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.history-btn {
+  background: #555;
+  margin-left: 10px;
+}
+.quote-btn:hover {
+  background: #000
+}
+.history-btn:hover {
+  background-color: #000;
+}
+
+/* left column */
+.left-bar {
+  border-right: 2px solid #222;
+  overflow: hidden;
+}
+#logo {
+  margin: 20px 50px;
+  width: 100px;
+}
+.stock {
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+}
+.news {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* chart */
+.chart {
+  margin-left: 20px;
+}
+.inner-table {
+  margin: 10px auto;
+}
+.chart-tr {
+  font-size: .8rem;
+  line-height: 0.3rem;
 }
