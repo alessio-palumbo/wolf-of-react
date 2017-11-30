@@ -13,16 +13,24 @@ class App extends Component {
   // The first time our component is rendered
   // this method is called
   componentDidMount() {
-    loadQuoteForStock('NFLX')
+    this.loadQuote()
+  }
+
+  loadQuote = () => {
+    const { enteredSymbol } = this.state
+
+    loadQuoteForStock(enteredSymbol)
       .then(quote => {
-        this.setState({ quote: quote })
+        this.setState({
+          quote: quote,
+          error: null // Clear error
+        })
       })
       .catch(error => {
         if (error.response.status === 404) {
-          error = new Error('The stock symbol does not exist')
+          error = new Error(`The stock symbol '${enteredSymbol} does not exist`)
         }
         this.setState({ error: error })
-        console.error('Error loading quote', error)
       })
   }
 
@@ -45,7 +53,11 @@ class App extends Component {
           placeholder="SyMbol e.g. NFLX"
           aria-label="Symbol"
           onChange={this.onChangeEnteredSymbol} />
-
+        <button
+          onClick={this.loadQuote}
+        >
+          Load Quote
+        </button>
         {
           error && <p>{error.message}</p>
         }

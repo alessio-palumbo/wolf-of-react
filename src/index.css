@@ -11,3 +11,11 @@ body {
 input {
   font-size: 1rem;
 }
+
+button {
+  font-size: 1rem;
+  color: white;
+  background: #222;
+  border: 0.1rem solid black;
+  margin-left: 0.25rem;
+}
