@@ -15,7 +15,12 @@ function SixMonthsTable({
       <td>{high}</td>
       <td>{low}</td>
       <td>{close}</td>
-      <td>{change}</td>
+      {
+        open > close ?
+          <td className='red'>{change}</td>
+          :
+          <td className='green'>{change}</td>
+      }
     </tr>
   )
 }

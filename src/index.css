@@ -4,10 +4,20 @@ html {
 
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0 20px;
   font-family: sans-serif;
 }
-
+.header {
+  margin: 0 0 30px 0;
+  background: #222;
+  color: white;
+  height: 120px;
+  padding-top: 30px;
+}
+h4 {
+  color: #fff !important;
+  background: #555;
+}
 input {
   font-size: 1rem;
 }
@@ -61,4 +71,29 @@ button {
 .chart-tr {
   font-size: .8rem;
   line-height: 0.3rem;
+}
+.red {
+  color: red;
+  text-align: right;
+}
+.red:after, .green:after {
+  content: '';
+  display: inline-block;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-left: 10px;
+}
+.red:after {
+  vertical-align: 3px;
+  border: solid red;
+  transform: rotate(45deg);
+}
+.green {
+  color: green;
+  text-align: right;
+}
+.green:after {
+  border: solid green;
+  transform: rotate(-135deg);
 }

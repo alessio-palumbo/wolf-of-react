@@ -34,7 +34,6 @@ class App extends Component {
 
     Promise.all(promises)
       .then(data => {
-        console.log(this.state.history)
         this.setState({
           quote: data[0],
           logo: data[1],
@@ -69,8 +68,10 @@ class App extends Component {
 
     return (
       <div className="App" >
-        <h1 className='text-center'>Wolf of React</h1>
-        <br />
+        <div className='header'>
+          <h1 className='text-center'>Wolf of React</h1>
+        </div>
+
         <div className='row'>
 
           {/* Quote and news column */}
