@@ -56,6 +56,14 @@ button {
   width: 80%;
   margin: 20px auto;
 }
+/* news */
+.news-title {
+  margin: 40px auto;
+}
+.news-container {
+  height: 500px;
+  overflow: auto;
+}
 .news {
   width: 90%;
   margin: 0 auto;

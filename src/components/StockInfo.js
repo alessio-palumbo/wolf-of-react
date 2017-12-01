@@ -28,7 +28,6 @@ function StockInfo({
         </tbody>
       </table>
       <p className="mark">Exchanges: {primaryExchange}</p>
-      <br />
     </div>
   )
 }

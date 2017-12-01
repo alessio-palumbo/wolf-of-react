@@ -103,16 +103,16 @@ class App extends Component {
                   <p>Loading...</p>
                 )
             }
-            <hr />
 
             {/* News */}
-            <h4 className='text-center'>Latest News</h4>
-            <hr />
-            {
-              news.map((latestNews, index) => (
-                <StockNews key={index} {...latestNews} />
-              ))
-            }
+            <h4 className='text-center news-title'>Latest News</h4>
+            <div className='news-container'>
+              {
+                news.map((latestNews, index) => (
+                  <StockNews key={index} {...latestNews} />
+                ))
+              }
+            </div>
           </div>
 
           {/* Right data-column */}
@@ -138,11 +138,13 @@ class App extends Component {
 
             {/* Chart */}
             <h4>Six Months Chart</h4>
+            <br />
             <Chart chartData={sixmonths} />
-            <hr />
+            <br />
 
             {/* Table */}
             <h4>Six Months Data</h4>
+            <br />
             <div className="table table-chart">
               <table className="inner-table">
                 <thead>
