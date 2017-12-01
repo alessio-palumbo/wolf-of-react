@@ -43,7 +43,7 @@ class App extends Component {
         })
       })
       .catch(error => {
-        if (error.response.status === 404) {
+        if (error && error.status === 404) {
           error = new Error(`The stock symbol '${enteredSymbol} does not exist`)
         }
         this.setState({ error: error })
@@ -143,7 +143,7 @@ class App extends Component {
 
             {/* Table */}
             <h4>Six Months Data</h4>
-            <div className="table">
+            <div className="table table-chart">
               <table className="inner-table">
                 <thead>
                   <tr className="chart-tr">

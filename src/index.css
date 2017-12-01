@@ -65,6 +65,12 @@ button {
 .chart {
   margin-left: 20px;
 }
+
+/* table */
+.table-chart {
+  height: 500px;
+  overflow: auto;
+}
 .inner-table {
   margin: 10px auto;
 }
@@ -76,10 +82,12 @@ button {
   color: red;
   text-align: right;
 }
+.green {
+  color: green;
+  text-align: right;
+}
 .red:after, .green:after {
   content: '';
-  display: inline-block;
-  border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
   margin-left: 10px;
@@ -87,13 +95,11 @@ button {
 .red:after {
   vertical-align: 3px;
   border: solid red;
+  border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-}
-.green {
-  color: green;
-  text-align: right;
 }
 .green:after {
   border: solid green;
+  border-width: 0 2px 2px 0;
   transform: rotate(-135deg);
 }
