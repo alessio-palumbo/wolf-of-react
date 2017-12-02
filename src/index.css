@@ -75,8 +75,8 @@ button {
 }
 
 /* table */
-.table-chart {
-  height: 500px;
+.table-container {
+  height: 570px;
   overflow: auto;
 }
 .inner-table {

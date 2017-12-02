@@ -145,7 +145,7 @@ class App extends Component {
             {/* Table */}
             <h4>Six Months Data</h4>
             <br />
-            <div className="table table-chart">
+            <div className="table table-container">
               <table className="inner-table">
                 <thead>
                   <tr className="chart-tr">
